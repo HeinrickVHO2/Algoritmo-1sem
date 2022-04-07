@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<H1> Cofrinho da alegria</H1>
+<span> Valor guardado R$<span id="guardado">0</span></span>
+<button onclick="guardar()">Guardar R$5,00</button>
+<button onclick="gastar()">Gastar R$10,00</button>
+<div id="mostrar"></div>
+</body>
+</html>
+<script>
+    var valor_total = 0
+function guardar() {
+    
+    valor_total = Number(valor_total+5)
+    guardado.innerHTML = `${valor_total}`
+
+    if (valor_total>100) {
+        mostrar.innerHTML = `#ostentação`
+    }
+    else if (valor_total==0) {
+        mostrar.innerHTML = `Finanças OK!`
+    }
+    
+}
+function gastar() {
+        valor_total= Number(valor_total-10)
+        guardado.innerHTML = `${valor_total}`
+
+        if (valor_total<0 && valor_total> -20) {
+            mostrar.innerHTML = `finanças em perigo!`
+        }
+        else if (valor_total<=-20) {
+            mostrar.innerHTML = `Quase um São Paulo`
+        }
+    }
+
+
+
+
+
+</script>

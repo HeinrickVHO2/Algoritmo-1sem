@@ -1,0 +1,46 @@
+<!-- 3. Para o ser humano, a temperatura é...
+⦁	Congelante (até menos de 14ºC)
+⦁	Com Frio (entre 14ºC e 21ºC)
+⦁	Confortável (mais de 21ºC até 24ºC)
+⦁	Com Calor (mais de 24ºC até 31ºC)
+⦁	Calor escaldante (mais de 31ºC)
+Crie um programa que, ao ler uma temperatura, exiba uma dessas situações de temperatura. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>TEMPERATURA IDEAL PARA O SER HUMANO</h1>
+    <p>INSIRA A TEMPERATURA DO AMBIENTE EM GRAUS CELSIUS(C°):
+    <br>
+    <input type="text" id="temp" placeholder="Ex:34" onkeyup="confirma()">
+    <br>
+    <div id="tela"></div></p>
+</body>
+</html>
+<script>
+    function confirma(params) {
+        if (temp.value<14) {
+            tela.innerHTML = 'Congelante'
+        } else {
+            if (temp.value<21) {
+                tela.innerHTML = 'Frio'                
+            } else {
+                if (temp.value<24) {
+                    tela.innerHTML = 'Confortável'                
+                } else {
+                    if (temp.value<31) {
+                        tela.innerHTML = 'Calor'
+                    } else {
+                        tela.innerHTML = 'Escaldante'
+                    }
+                }
+                
+            }
+        }
+    }
+</script>
